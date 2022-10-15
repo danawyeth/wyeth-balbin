@@ -1,16 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 $light: #eefcfd;
-$dark-primary: #4B017A;
+$dark-primary: #4b017a;
 $dark-primary-lighten: rgba(101, 32, 106, 0.5);
+
+@mixin bubbleText {
+  width: 90%;
+  height: 30%;
+  border-radius: 15px;
+  font-size: clamp(0.7rem, 1.5vw, 4vh);
+  position: absolute;
+  float: right;
+  opacity: 0;
+  padding: 6%;
+  margin-left: 7%;
+  margin-top: 35%;
+  text-align: center;
+  background-color: #fff;
+  transition: all 320ms ease-in-out;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba($color: #fff, $alpha: 0.9);
+    box-shadow: 0 0 0 0 inset, 0 10px 10px 4px rgba(101, 32, 106, 0.7);
+    //box-shadow: 0 0 0 0 inset, 0 10px 20px 5px rgba($color: #fff, $alpha: .8);
+  }
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   color: $dark-primary;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .main {
@@ -28,7 +51,7 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
     h1 {
       font-family: "Oleo Script", cursive;
       text-shadow: 0 3px 2px $dark-primary-lighten;
-      color: d$dark-primary;
+      color: $dark-primary;
     }
     ul {
       list-style: none;
@@ -41,159 +64,176 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
         transition: 0.1s;
 
         &:hover {
-            border-bottom: 1px solid rgba(101, 32, 106, 0.2);
-            cursor: pointer;
+          border-bottom: 1px solid rgba(101, 32, 106, 0.2);
+          cursor: pointer;
         }
       }
     }
     button {
-        width: 120px;
+      width: 120px;
+      height: 50px;
+      border-radius: 15px;
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      background-color: $dark-primary;
+      border-color: $dark-primary;
+      transition: all 250ms ease-in-out;
+      box-shadow: 0 3px 5px 0 $dark-primary-lighten;
+
+      &:hover {
+        color: $dark-primary;
+        background-color: transparent;
+        box-shadow: 0 0 10px 0 rgba(101, 32, 106, 0.8) inset,
+          0 0 10px 4px rgba(101, 32, 106, 0.8);
+      }
+    }
+  }
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  margin-top: 10px;
+
+  .leftIntro {
+    width: 58%;
+    position: relative;
+
+    .flex {
+      margin-top: -20px;
+      position: inherit;
+      overflow: hidden;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+
+      .box1 {
+        width: 50%;
+        height: 50%;
+        margin-left: 80px;
+        transition: all 10s ease;
+        animation: animate 10s ease-in-out infinite;
+
+        p {
+          @include bubbleText();
+        }
+
+        .webBubble {
+          width: 100%;
+        }
+
+        @keyframes animate {
+          0%,
+          100% {
+            transform: translateY(-10px);
+          }
+          50% {
+            transform: translateY(10px);
+          }
+        }
+      }
+
+      .box2 {
+        width: 32%;
+        margin-left: 20px;
+        margin-top: 85px;
+        animation: animate 11s ease-in-out infinite;
+
+        @keyframes animate {
+          0%,
+          100% {
+            transform: translateY(-10px);
+          }
+          50% {
+            transform: translateY(10px);
+          }
+        }
+
+        p {
+          @include bubbleText();
+          padding: 9%;
+        }
+        .uiBubble {
+          width: 100%;
+        }
+      }
+
+      .box3 {
+        width: 38%;
+        margin-left: 368px;
+        margin-top: -65px;
+        animation: animate 8s ease-in-out infinite;
+
+        p {
+          @include bubbleText();
+          padding: 10%;
+        }
+
+        @keyframes animate {
+          0%,
+          100% {
+            transform: translateY(-10px);
+          }
+          50% {
+            transform: translateY(10px);
+          }
+        }
+
+        .tdBubble {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .rightIntro {
+    width: 44%;
+
+    .introText {
+      position: absolute;
+      float: left;
+      margin: 280px 0 0 0;
+      //z-index: 4; 115px
+
+      .hi {
+        margin: 0;
+      }
+      .name {
+        font-weight: 800;
+        margin: 0;
+      }
+      .craft {
+        font-style: italic;
+        margin: 0;
+        z-index: 100;
+        position: absolute;
+      }
+      button {
         height: 50px;
+        margin-top: 29px;
+        padding: 0 24px;
         border-radius: 15px;
         font-weight: 700;
         font-size: 15px;
         color: #fff;
         background-color: $dark-primary;
         border-color: $dark-primary;
-        transition: all 250ms ease-in-out; 
-        box-shadow: 0 3px 5px 0 $dark-primary-lighten;
-        
-        &:hover {
-            color: $dark-primary;
-            background-color: transparent;
-            box-shadow: 0 0 10px 0 rgba(101, 32, 106, 0.8) inset, 0 0 10px 4px rgba(101, 32, 106, 0.8);
-        }
 
+        &:hover {
+        }
+      }
+      .long-text {
+        width: 240px;
+      }
+    }
+    .wyethPng {
+      position: relative;
+      //z-index: 6;
+      margin-top: 90px;
+      margin-right: 35px;
+      height: 640px;
+      float: right;
+      //opacity: 0.8;
     }
   }
-}
-
-.intro {
-    height: 100vh;
-    display: flex;
-    margin-top: 10px;
-    //flex-wrap: wrap;
-    //flex-shrink: 0; 
-    //background: transparent;
-    
-    
-    .leftIntro{
-        width: 58%;
-        position: relative;
-
-        
-        .flex {
-            margin-top: -20px;
-            position: inherit;
-            overflow: hidden;
-            display: flex;
-            flex-flow: row wrap; 
-            align-items: center;
-            
-            
-            .webBubble {
-                width: 50%;
-                height: 50%;
-                margin-left: 120px;
-                animation: animate 10s ease-in-out infinite;
-
-                @keyframes animate {
-                    0%, 100%
-                      {
-                        transform: translateY(-10px);
-                      }
-                    50%
-                      {
-                        transform: translateY(10px);
-                      }
-                    }
-                
-            }
-            .uiBubble {
-                width: 30%;
-                height: 30%;
-                margin-left: 20px;
-                margin-top: 80px;
-                animation: animate 11s ease-in-out infinite;
-
-                @keyframes animate {
-                    0%, 100%
-                      {
-                        transform: translateY(-10px);
-                      }
-                    50%
-                      {
-                        transform: translateY(10px);
-                      }
-                    }
-            }
-            .tdBubble {
-                width: 38%;
-                height: 380%;
-                margin-left: 368px;
-                margin-top: -65px;
-                animation: animate 8s ease-in-out infinite;
-
-                @keyframes animate {
-                    0%, 100%
-                      {
-                        transform: translateY(-10px);
-                      }
-                    50%
-                      {
-                        transform: translateY(10px);
-                      }
-                    }
-            }
-
-        }
-    }
-    .rightIntro {
-        width: 44%;
-        
-        .introText {
-            position: absolute;
-            float: left;
-            margin: 280px 0 0 0;
-            //z-index: 4; 115px
-            
-           
-            .hi {margin: 0;}
-            .name {font-weight: 800;margin: 0;}
-            .craft {
-                font-style: italic;
-                margin: 0;
-                z-index: 100;
-                position: absolute;
-            }
-            button {
-                height: 50px;
-                margin-top: 29px;
-                padding: 0 24px;
-                border-radius: 15px;
-                font-weight: 700;
-                font-size: 15px;
-                color: #fff;
-                background-color: $dark-primary;
-                border-color: $dark-primary;
-    
-                &:hover {
-                }
-            }
-
-            .long-text {
-                width: 240px;
-            }
-        }
-        .wyethPng {
-            position: relative;
-            //z-index: 6;
-            margin-top: 90px;
-            margin-right: 35px;
-            height: 640px;
-            float: right;
-            //opacity: 0.8;
-        }
-    }
-    
 }

@@ -12,11 +12,20 @@ const Intro = () => {
   return (
     <>
       <div className="intro flex">
-        <div className="leftIntro">
+      <div className="leftIntro">
           <div className="flex">
-            <img className="webBubble" src="laptopBubble.png" alt="" />
-            <img className="uiBubble" src="bubble.png" alt="" />
-            <img className="tdBubble" src="bubble.png" alt="" />
+            <div className="box1">
+            <p><strong>Web Developer</strong> (React/Angular)</p>
+              <img className="webBubble" src="laptopBubble.png" alt="" />
+            </div>
+            <div className="box2">
+            <p><strong>UI/UX Designer</strong></p>
+              <img className="uiBubble" src="uiBubble.png" alt="" />
+            </div>
+            <div className="box3">
+            <p><strong>3D Designer</strong></p>
+              <img className="tdBubble" src="bubble.png" alt="" />
+            </div>
           </div>
         </div>
         <div className="rightIntro">
@@ -41,6 +50,8 @@ const Intro = () => {
           <img className="wyethPng" src="./wyeth.png" alt="" />
         </div>
       </div>
+      
+      
     </>
   );
 };
