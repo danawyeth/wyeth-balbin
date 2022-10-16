@@ -6,8 +6,8 @@ $dark-primary: #4b017a;
 $dark-primary-lighten: rgba(101, 32, 106, 0.5);
 
 @mixin bubbleText {
-  width: 90%;
-  height: 30%;
+  max-width: 90%;
+  min-height: 30%;
   border-radius: 15px;
   font-size: clamp(0.7rem, 1.5vw, 4vh);
   position: absolute;
@@ -28,6 +28,12 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
       background-color: rgba($color: #fff, $alpha: 0.9);
       box-shadow: 0 0 0 0 inset, 0 10px 10px 4px rgba(101, 32, 106, 0.7);
       //box-shadow: 0 0 0 0 inset, 0 10px 20px 5px rgba($color: #fff, $alpha: .8);
+
+      @media (max-width: 960px) {
+          padding: 35px 12vw;
+          font-size: 3vw;
+          margin: 35% 0 0 7%;
+      }
     }
   }
 }
@@ -44,22 +50,21 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
   //  background-color: $light;
   background-image: url("../wyeBg.png");
   background-size: cover;
-  width: clamp(720px, 100%, 1920px);
-  margin: 0 auto;
+  //  max-width: clamp(720px, 100%, 1920px);
+  //  margin: 0 auto;
 }
 
 .header {
-
-    @media screen and (max-width: 868px) {
-        
-        
-    }
   .flex {
     display: flex;
     justify-content: space-between;
   }
   .container {
     padding: 20px 0;
+
+    @media screen and (max-width:960px) {
+        padding: 20px 25px;
+    }
 
     h1 {
       font-family: "Oleo Script", cursive;
@@ -85,7 +90,7 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
       }
     }
     button {
-      width: clamp(60px, 1920px, 120px);
+      max-width: clamp(60px, 1920px, 120px);
       height: 50px;
       border-radius: 15px;
       font-weight: 700;
@@ -107,18 +112,14 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
 }
 
 .intro {
-    width: auto;
-  height: 100vh;
+  max-width: 100%;
+  min-height: 100vh;
   display: flex;
   margin-top: 10px;
 
   .leftIntro {
-    width: 58%;
+    max-width: 58%;
     position: relative;
-
-    @media screen and (max-width: 1280px) {
-      z-index: 10;
-    }
 
     .flex {
       margin-top: -20px;
@@ -128,34 +129,19 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
       flex-flow: row wrap;
       align-items: center;
 
-      img {
-        @media screen and (min-width: 768px) {
-            //position: absolute;
-            overflow: auto;
-            //display: block;
-            margin: 0 auto;
-            padding: 0 auto;
-
-          }
-      }
-
       .box1 {
-        width: 50%;
-        height: 50%;
+        max-width: 50%;
+        min-height: 50%;
         margin-left: 80px;
         transition: all 10s ease;
         animation: animate 10s ease-in-out infinite;
         @include hoverBubbleP();
 
-        @media screen and (max-width: 768px) {
-        margin: 0;
-        }
-
         p {
           @include bubbleText();
         }
         .webBubble {
-          width: 100%;
+          max-width: 100%;
         }
 
         @keyframes animate {
@@ -170,15 +156,11 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
       }
 
       .box2 {
-        width: 32%;
+        max-width: 32%;
         margin-left: 20px;
         margin-top: 85px;
         animation: animate 11s ease-in-out infinite;
         @include hoverBubbleP();
-
-        @media screen and (max-width: 768px) {
-            margin: 0;
-            }
 
         @keyframes animate {
           0%,
@@ -195,22 +177,16 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
           padding: 9%;
         }
         .uiBubble {
-          width: 100%;
+          max-width: 100%;
         }
       }
 
       .box3 {
-        width: 38%;
-        margin-left: 368px;
+        max-width: 38%;
+        margin-left: 24vw;
         margin-top: -65px;
         animation: animate 8s ease-in-out infinite;
         @include hoverBubbleP();
-
-        @media screen { 
-            @media (max-width: 768px) {
-            margin: -10% 0 0 33%;
-            }
-        }
 
         p {
           @include bubbleText();
@@ -228,25 +204,40 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
         }
 
         .tdBubble {
-          width: 100%;
+          max-width: 100%;
         }
+      }
+
+      @media (max-width: 960px) {
+          display: block;
+          .box1, .box2, .box3 {
+              margin: 0 auto;
+              max-width: 60%;
+              height: 100%;
+          }
+
       }
     }
   }
 
   .rightIntro {
-    width: 44%;
+    overflow: hidden;
+    max-width: 44%;
     position: relative;
+    
 
     .introText {
       position: absolute;
       float: left;
-      margin: 260px 0 0 0;
+
+      margin: 38vh 0 0 0;
       //  z-index: 3;
 
-      @media screen and (max-width: 1280px) {
-        z-index: 10;
-      }
+        @media screen and (max-width: 960px) {
+          z-index: 10;
+          margin-top: 31vh;
+        //margin: 0 auto;
+        }
 
       .hi {
         margin: 0;
@@ -262,7 +253,7 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
         position: absolute;
       }
       .connectWMeDiv {
-        width: 85%;
+        max-width: 85%;
         height: 55px;
         margin-top: 29px;
         padding: 14px 32px;
@@ -297,67 +288,72 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
             background-color: $dark-primary;
             margin: 0 4px;
             cursor: pointer;
-            width: 40px;
+            max-width: 40px;
             height: 40px;
             color: #eefcfd;
             border-color: #fff;
             border-radius: 50%;
 
-            &:hover{
-                background-color: $light;
-                color: $dark-primary;
+            &:hover {
+              background-color: $light;
+              color: $dark-primary;
             }
           }
         }
       }
 
       .long-text {
-        width: 240px;
+        max-width: 240px;
         margin-top: 5px;
       }
     }
     .wyethPng {
       position: relative;
       z-index: 6;
-      margin-top: 70px;
-      margin-right: 15px;
-      height: 640px;
-      float: right;
+      margin-top: 9vh;
+      margin-left: 10vw;
+      max-height: 93vh;
       opacity: 1;
 
-      //  @media screen and (max-width:1280px){
-      //      opacity: .4;
-      //      z-index: 0;
-      //      margin-right: 25%;
-      //  }
-
-      @media screen {
-        @media (max-width: 1280px) {
-          opacity: 0.4;
-          z-index: 0;
-          
-        }
-        @media (min-width: 1920px) {
-            margin-right: 25%;
-        }
+      @media (max-width: 960px) {
+        opacity: 0.6;
+        z-index: 0;
+        margin-top: 0;
       }
+    }
+  }
+
+  @media (max-width: 960px) {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0;
+
+    .leftIntro,
+    .rightIntro {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .rightIntro {
+        align-items: center;
+        padding: 0 20vw;
+        margin-top: 0;
     }
   }
 }
 
 .portfolio {
-    .container {
-        //width: 100vw;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
+  .container {
+    //width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 
-        .box {
-            height: 40vh;
-            width: 100vw;
-            //margin: 0 auto;
-            background-color: black;
-
-        }
+    .box {
+      height: 40vh;
+      width: 100vw;
+      //margin: 0 auto;
+      background-color: black;
     }
-} 
+  }
+}
