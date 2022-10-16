@@ -41,10 +41,19 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
 }
 
 .main {
-  background-color: $light;
+  //  background-color: $light;
+  background-image: url("../wyeBg.png");
+  background-size: cover;
+  width: clamp(720px, 100%, 1920px);
+  margin: 0 auto;
 }
 
 .header {
+
+    @media screen and (max-width: 868px) {
+        
+        
+    }
   .flex {
     display: flex;
     justify-content: space-between;
@@ -60,9 +69,11 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
     ul {
       list-style: none;
       display: inline-block;
+
       font-weight: 500;
       li {
         display: inline-block;
+
         margin: 0 30px;
         margin-top: 18px;
         transition: 0.1s;
@@ -74,11 +85,11 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
       }
     }
     button {
-      width: 120px;
+      width: clamp(60px, 1920px, 120px);
       height: 50px;
       border-radius: 15px;
       font-weight: 700;
-      font-size: 15px;
+      font-size: clamp(0.7rem, 1.5vw, 2.2vh);
       color: #fff;
       background-color: $dark-primary;
       border-color: $dark-primary;
@@ -96,6 +107,7 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
 }
 
 .intro {
+    width: auto;
   height: 100vh;
   display: flex;
   margin-top: 10px;
@@ -103,6 +115,10 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
   .leftIntro {
     width: 58%;
     position: relative;
+
+    @media screen and (max-width: 1280px) {
+      z-index: 10;
+    }
 
     .flex {
       margin-top: -20px;
@@ -112,6 +128,17 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
       flex-flow: row wrap;
       align-items: center;
 
+      img {
+        @media screen and (min-width: 768px) {
+            //position: absolute;
+            overflow: auto;
+            //display: block;
+            margin: 0 auto;
+            padding: 0 auto;
+
+          }
+      }
+
       .box1 {
         width: 50%;
         height: 50%;
@@ -119,6 +146,10 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
         transition: all 10s ease;
         animation: animate 10s ease-in-out infinite;
         @include hoverBubbleP();
+
+        @media screen and (max-width: 768px) {
+        margin: 0;
+        }
 
         p {
           @include bubbleText();
@@ -144,6 +175,10 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
         margin-top: 85px;
         animation: animate 11s ease-in-out infinite;
         @include hoverBubbleP();
+
+        @media screen and (max-width: 768px) {
+            margin: 0;
+            }
 
         @keyframes animate {
           0%,
@@ -171,6 +206,12 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
         animation: animate 8s ease-in-out infinite;
         @include hoverBubbleP();
 
+        @media screen { 
+            @media (max-width: 768px) {
+            margin: -10% 0 0 33%;
+            }
+        }
+
         p {
           @include bubbleText();
           padding: 10%;
@@ -195,11 +236,17 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
 
   .rightIntro {
     width: 44%;
+    position: relative;
 
     .introText {
       position: absolute;
       float: left;
-      margin: 280px 0 0 0;
+      margin: 260px 0 0 0;
+      //  z-index: 3;
+
+      @media screen and (max-width: 1280px) {
+        z-index: 10;
+      }
 
       .hi {
         margin: 0;
@@ -211,63 +258,106 @@ $dark-primary-lighten: rgba(101, 32, 106, 0.5);
       .craft {
         font-style: italic;
         margin: 0;
-        z-index: 100;
+        z-index: 7;
         position: absolute;
       }
       .connectWMeDiv {
-        width: 80%;
-        height: 50px;
+        width: 85%;
+        height: 55px;
         margin-top: 29px;
-        padding: 12px 32px;
+        padding: 14px 32px;
         border-radius: 15px;
         font-weight: 700;
-        font-size: 15px;
+        font-size: 16px;
         color: #fff;
         background-color: $dark-primary;
-
-      }
-
-      .socialIcons {
-        opacity: 0;
-        display: block;
-        justify-content: space-evenly;
-        margin-top: -43px;
-        margin-left: 9px;
-        position: absolute;
-        gap: 10px;
-        transition: all 1s ease;
+        transition: all 100ms ease;
+        z-index: 2;
 
         &:hover {
-            opacity: 1;
-            background-color: $dark-primary;
-            border-radius: 150%;
+          color: $dark-primary;
 
+          .socialIcons {
+            opacity: 1;
+            border-radius: 150%;
+            z-index: 8;
+          }
         }
 
-        button {
+        .socialIcons {
+          opacity: 0;
+          display: block;
+          margin-top: -30px;
+          margin-left: -24px;
+          position: absolute;
+          gap: 10px;
+          transition: all 1s ease;
+
+          button {
+            background-color: $dark-primary;
             margin: 0 4px;
             cursor: pointer;
-            width: 35px;
-            height: 35px;
-            color: black;
-            background-color: aliceblue;
+            width: 40px;
+            height: 40px;
+            color: #eefcfd;
+            border-color: #fff;
             border-radius: 50%;
-        }
 
-    }
-      
+            &:hover{
+                background-color: $light;
+                color: $dark-primary;
+            }
+          }
+        }
+      }
+
       .long-text {
         width: 240px;
+        margin-top: 5px;
       }
     }
     .wyethPng {
       position: relative;
-      //z-index: 6;
-      margin-top: 90px;
-      margin-right: 35px;
+      z-index: 6;
+      margin-top: 70px;
+      margin-right: 15px;
       height: 640px;
       float: right;
-      opacity: 0.8;
+      opacity: 1;
+
+      //  @media screen and (max-width:1280px){
+      //      opacity: .4;
+      //      z-index: 0;
+      //      margin-right: 25%;
+      //  }
+
+      @media screen {
+        @media (max-width: 1280px) {
+          opacity: 0.4;
+          z-index: 0;
+          
+        }
+        @media (min-width: 1920px) {
+            margin-right: 25%;
+        }
+      }
     }
   }
 }
+
+.portfolio {
+    .container {
+        //width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+
+        .box {
+            height: 40vh;
+            width: 100vw;
+            //margin: 0 auto;
+            background-color: black;
+
+        }
+    }
+} 

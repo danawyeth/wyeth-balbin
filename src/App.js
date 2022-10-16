@@ -1,8 +1,9 @@
 import './styles/app.scss';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './components/Header';
-import Intro from './components/Intro';
+import Intro from './components/pageContent/Intro';
+import HomePages from './components/Homepages/HomePages';
 
 
 function App() {
@@ -10,7 +11,11 @@ function App() {
     <>
     <div className="main">
       <Header/>
-      <Intro/>
+      <Router>
+          <Switch>
+              <Route path="/" exact component={HomePages} />
+          </Switch>
+      </Router>
       </div>
     </>
   );

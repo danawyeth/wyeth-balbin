@@ -44,25 +44,26 @@ const Intro = () => {
                   <p className="craft">{data.craft}</p>
                   <div className="connectWMeDiv">
                     connect with me
-                  </div>
-                  <div className="socialIcons">
+                    <div className="socialIcons">
                       <button
                         type="button"
-                        className="btn fa-brands fa-linkedin"
+                        className="btn fab fa-brands fa-linkedin"
                       ></button>
                       <button
                         type="button"
-                        className="btn fa-brands fa-github"
+                        className="btn fab fa-brands fa-github"
                       ></button>
                       <button
                         type="button"
-                        className="btn fa-regular fa-envelope"
+                        className="btn fa fa-regular fa-envelope"
                       ></button>
                       <button
                         type="button"
                         className="btn fab fa-instagram instagram"
                       ></button>
                     </div>
+                  </div>
+                  
                   <div className="long-text">
                     <p>{data.desc}</p>
                   </div>
