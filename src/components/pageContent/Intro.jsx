@@ -11,7 +11,7 @@ const Intro = () => {
   ];
   return (
     <>
-      <div className="intro flex">
+      <div id="intro" className="intro flex">
         <div className="leftIntro">
           <div className="flex">
             <div className="box1">
@@ -45,25 +45,45 @@ const Intro = () => {
                   <div className="connectWMeDiv">
                     connect with me
                     <div className="socialIcons">
-                      <button
-                        type="button"
-                        className="btn fab fa-brands fa-linkedin"
-                      ></button>
+                      <a
+                        href="https://www.linkedin.com/in/dana-wyeth-b-a5047923a/"
+                        target="_blank"
+                        rel="noreferrer">
+                        <button
+                          type="button"
+                          className="btn fab fa-brands fa-linkedin"
+                        ></button>
+                      </a>
+                      {/*<a
+                        href=""
+                        target="_blank"
+                        rel="noreferrer">*/}
                       <button
                         type="button"
                         className="btn fab fa-brands fa-github"
                       ></button>
+                          {/*</a>*/}
+                          <a
+                        href="mailto:danawyeth@proton.me"
+                        target="_blank"
+                        rel="noreferrer">
                       <button
                         type="button"
-                        className="btn fa fa-regular fa-envelope"
+                        className="btn fa fa-regular fa-envelope"   
                       ></button>
+                          </a>
+                          <a
+                        href="https://www.instagram.com/mooi.pearl/"
+                        target="_blank"
+                        rel="noreferrer">
                       <button
                         type="button"
                         className="btn fab fa-instagram instagram"
                       ></button>
+                          </a>
                     </div>
                   </div>
-                  
+
                   <div className="long-text">
                     <p>{data.desc}</p>
                   </div>
