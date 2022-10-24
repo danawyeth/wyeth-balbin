@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/scss";
@@ -11,10 +11,10 @@ import Modal from "react-bootstrap/Modal";
 //import Col from "react-bootstrap/Col";
 //import Container from "react-bootstrap/Container";
 //import Row from "react-bootstrap/Row";
-import Data from './PortfolioData'
+import Data from "./PortfolioData";
 SwiperCore.use([Pagination]);
 
-export default function Portfolio() {  
+export default function Portfolio() {
   let params = {
     pagination: {
       //  dynamicBullets: true,
@@ -34,65 +34,105 @@ export default function Portfolio() {
     loop: false,
   };
 
-  let swiperPort = (x, name) => {
-    console.log("swiperPort", x);
-    return (
-      <>
-        <Swiper {...params}>
-          {x.map((data, index) => {
-            return (
-              <>
-                <SwiperSlide className={name} onClick={(event) => {updatedRole({x});handleShow();}}>
-                  <img key={index} src={data.img}  alt="" />
-                </SwiperSlide>
-              </>
-            );
-          })}
-        </Swiper>
-      </>
-    );
-  };
+    let swiperPort = (x, name) => {
+      console.log("swiperPort", x);
+      return (
+        <>
+          <Swiper {...params}>
+            {x.map((data, index) => {
+              return (
+                <>
+                  <SwiperSlide className={name} onClick={(event) => {updatedRole(x);handleShow(); updatedIndex(index)}}>
+                    <img key={index} src={data.img}  alt="" />
+                  </SwiperSlide>
+                </>
+              );
+            })}
+          </Swiper>
+        </>
+      );
+    };
 
-  const handleShow = () => {
-    setShow(true)
-    console.log("Modal open clicked role handleshow modal", role);
-  };
+  console.log("webDev", Data.webDev);
+  //console.log("nEW object structure", Data.webDev.p1.img);
+
+    //let swiperModal = (x) => {
+    //    console.log("Modal open clicked role swiper modal", role);
+    //    const objTest = Object.values(x);
+
+    //  return (
+    //    <>
+    //      <Swiper {...paramsModal}>
+    //        {objTest.map((data, {index}) => {
+    //          return (
+    //            <>
+    //              <SwiperSlide >
+    //                  {/* HELP ME I AM STUCKED. 12:38 NA. SO PROBLEM IS SHOW MODAL IS NOT SHOWING ANYTHING FIX IT */}
+    //                <img key={index} src={data.imgModal} alt=""/>
+    //              </SwiperSlide>
+    //            </>
+    //          );
+    //        })}
+    //      </Swiper>
+    //    </>
+    //  );
+    //};
+
+    //let swiperModal = (x, name) => {
+    //  console.log("swipermodal", x[index]);
+    //  const test = x[0];
+    //  return (
+    //    <>
+    //      <Swiper {...paramsModal}>
+    //        {x.map((data, index) => {
+    //          return (
+    //            <>
+    //              <SwiperSlide className={name}>
+    //                <img key={index} src={data.img}  alt="" />
+    //              </SwiperSlide>
+    //            </>
+    //          );
+    //        })}
+    //      </Swiper>
+    //    </>
+    //  );
+    //};
+
+    let swiperModal = (x, name) => {
+        console.log("swipermodal", x.imgModal, "role index", role[0]);
+        const test = x[0];
+        return (
+          <>
+            <Swiper {...paramsModal}>
+              {x[index].imgModal.map((data, i) => {
+                return (
+                  <>
+                    <SwiperSlide className={name}>
+                      {/*<img key={data} src={x[index].imgModal[i]}  alt="" />*/}
+                      <img key={data} src={x[index].imgModal[i]}  alt="" />
+                      {console.log("mamamo", x[index].imgModal[i])}
+                    </SwiperSlide>
+                  </>
+                );
+              })}
+            </Swiper>
+          </>
+        );
+      };
+
+  let [role, updatedRole] = useState();
+  let [index, updatedIndex] = useState(0);
 
 
-  let swiperModal = (x) => {
-      console.log("Modal open clicked role swiper modal", role);
+  console.log("ROLE", role);
+  console.log("DATAWEBDEV", Data.webDev);
 
-    return (
-      <>
-        <Swiper {...paramsModal}>
-          {Object.keys(x).map((data, i) => {
-            return (
-              <>
-                <SwiperSlide>
-                    {/* HELP ME I AM STUCKED. 12:38 NA. SO PROBLEM IS SHOW MODAL IS NOT SHOWING ANYTHING FIX IT */}
-                  <img key={i} src={x[data].img} alt=""/>
-                  {console.log("ayoh pwede pala", Object.entries(x), x )}
-                </SwiperSlide>
-              </>
-            );
-          })}
-        </Swiper>
-      </>
-    );
-  };
- 
-
-
-  let [ role, updatedRole ] = useState(Data.webDev);
-   //getting functioni to be used in an other function
-
-   console.log("ROLE", role);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-
-
- 
-
+  const handleShow = () => {
+    setShow(true);
+    console.log("Modal open clicked role handleshow modal", role);
+  };
 
   const ref = useRef(null);
 
@@ -118,19 +158,25 @@ export default function Portfolio() {
             <Modal.Header closeButton aria-labelledby="p-0"></Modal.Header>
             <Modal.Body>
               <div className="flex">
-                <div className="left">{swiperModal(role)}</div>
+                {show ? <div className="left">{swiperModal(role)}</div> : <p>dead</p>}
 
-                <div className="right">
+                {show ? <div className="right">
                   <div className="modalText">
-                    <h5>PROJECT</h5>
-                    <h1>Baguio Visita</h1>
-                    <h5 className="role">UI Design Front-End Development</h5>
+                    <h5 className="">PROJECT</h5>
+                    <h1>{role[index].title}</h1>
+                    <h5 className="role">{role[index].role}</h5>
                     <div className="capsules"></div>
-                    <h6><strong>ABOUT</strong></h6>
-                    <p>Built and designed web components for Baguio VIS.I.T.A - the Baguio VIS.I.T.A. (Visitor Information and Travel Assistant) is the online registration system for Baguio tourists and travelers. It has become an instrumental tool for the city’s cautious re-start of tourism activities and gradual re-opening of the local economy.</p>
-                    <p><u>https://visita.baguio.gov.ph/</u></p>
+                    <h6>
+                      <strong>ABOUT</strong>
+                    </h6>
+                    <p>
+                    {role[index].about}
+                    </p>
+                    <p>
+                      <u>{role[index].link}</u>
+                    </p>
                   </div>
-                </div>
+                </div> : <p>🫠</p>}
               </div>
             </Modal.Body>
           </Modal>
