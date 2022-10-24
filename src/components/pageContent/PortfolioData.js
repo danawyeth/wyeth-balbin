@@ -1,22 +1,27 @@
+//import img from ".src/assets";
+
+
 const data = {
     webDev: [
         {
             id: 1,
-            title: "mamamo",
-            imgModal: ["imgTest.jpg", "imgTes.jpeg", "imgTest.jpg",],
-            img: "imgTest.jpg",
-            role: "Di ko din alam",
-            about: "uLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-            link: "adfajdshakjshdkajshda.com",
+            title: "Baguio Visita 2.0",
+            imgModal: ["./assets/baguio-visita/bv1.jpeg", "./assets/baguio-visita/bv.jpeg", "./assets/baguio-visita/bv2.jpeg"],
+            img: "./assets/baguio-visita/bv1.jpeg",
+            role: "Frontend Developer & UI Designer",
+            about: "Built and designed web components for Baguio VIS.I.T.A - the Baguio VIS.I.T.A. (Visitor Information and Travel Assistant) is the online registration system for Baguio tourists and travelers. It has become an instrumental tool for the city’s cautious re-start of tourism activities and gradual re-opening of the local economy.",
+            link: "https://visita.baguio.gov.ph/",
+            tools: ["Angular", "HTML & SCSS", "TypeScript", "VSCode", "GitLab", "Figma" ],
         },
         {
             id: 2,
-            title: "Baguio Visita",
-            imgModal: ["imgTest2.jpeg", "imgTest2.jpeg"],
-            img: "imgTest2.jpeg",
-            role: "Di ko din alam",
-            about: "uLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+            title: "Work Portfolio",
+            imgModal: ["./assets/portfolio/ppCover.jpeg"],
+            img: "./assets/portfolio/ppCover.jpeg",
+            role: "Frontend Developer  & UI Designer",
+            about: "Wyeth's work portfolio showcasing her past projects. She created the website in a span of one week. The portfolio's design shows a lot about her aesthetic and an eye for art",
             link: "adfajdshakjshdkajshda.com",
+            tools: ["Angular", "HTML & SCSS", "TypeScript", "VSCode", "GitLab", "Figma" ],
         },
         {
             id: 3,

@@ -401,7 +401,7 @@ $portTextColor: #e8e8e8;
     //height: 100vh;
     height: auto;
     border-radius: 20px;
-    margin: 0 4vw;
+    margin: 0 4vw 4vh 4vw;
     padding-bottom: 10px;
     background-color: #3f2b4a;
 
@@ -424,7 +424,8 @@ $portTextColor: #e8e8e8;
       font-style: italic;
     }
     .webDev {
-      margin: 4vh 0 4vh 0;
+      margin: 1.5vh 0 4vh 0;
+      margin: 1.5vh 0 4vh 0;
 
       @include swiperJs();
     }
@@ -460,18 +461,33 @@ $portTextColor: #e8e8e8;
     .flex {
       display: flex;
 
+      @media (max-width: 960px) {
+        font-size: 3vw;
+        display: block;
+        
+        .left, .right {
+            width: 100% !important;
+        }
+        //  margin: 35% 0 0 7%;
+      }
+
       .left {
         width: 55%;
         //@include swiperJs();
 
+        //@media (max-width: 960px) {
+        //    width: 100%;
+        //}
         .mySwiper {
           position: relative;
           width: 100%;
-          padding-left: 1vw;
+          padding: 0 .5vw 0 1vw;
 
           img {
             border: 1px solid $dark-primary;
             width: 100%;
+            justify-content: center;
+            align-items: center;
 
             border-radius: 10px;
             height: 100%;
@@ -497,7 +513,7 @@ $portTextColor: #e8e8e8;
         width: 45%;
 
         .modalText {
-          padding: 6vh 4vw 0 3.8vw;
+          padding: 6vh 4vw 0 2.5vw;
 
           //align-items: center;
           //justify-content: center;
@@ -510,25 +526,50 @@ $portTextColor: #e8e8e8;
           h5 {
             font-weight: 400;
             margin: 0;
-            
+            font-size: 16px;
           }
           .role {
             //margin: -10px 0 -8px 0;
-            margin: 0;
+            margin: 0 0 10px 0;
             font-style: italic;
+            font-size: 20px;
           }
 
           .project{
-              font-size: 18px;
+              font-size: 12px;
               margin-bottom: -10px;
           }
 
           h6 {
-            margin: 10px 0;
+            margin: 10px 0 2px 0;
           }
           p {
             font-weight: 100;
-            //padding: 0 2vw 0 0;
+            margin-bottom: 12px;
+          }
+
+          .capsuleContainer {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              margin: 0;
+              padding: 0;
+              gap: 8px 15px;
+              .capsules {
+                //  margin: .5vh 5px;
+                  width: auto;
+                  padding: auto;
+                  background-color: $light;
+                  border-radius: 15px;
+                  
+              }
+              p {
+                margin: 0;
+                padding: 4px 14px;
+                font-weight: bold;
+                color: #B7A6C2;
+                text-transform: uppercase;
+              }
           }
         }
       }
