@@ -1,23 +1,27 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-scroll";
+
+
 
 const Header = () => {
   return (
     <>
-      <header className="header">
+      <header className="header" id="header">
         <div className="container flex">
           <h1 className="logo">Wyeth</h1>
           <div className="nav">
             <ul>
-              <AnchorLink href="#intro">
+             <Link to="intro" spy={true} smooth={true} offset={-10} duration={50}>
                 <li>intro</li>
-              </AnchorLink>
-              <AnchorLink href="#portfolio">
+              </Link>
+             
+              <Link to="portfolio" spy={true} smooth={true} offset={-10} duration={50}>
                 <li>portfolio</li>
-              </AnchorLink>
-              <AnchorLink href="#aboutMe">
+              </Link>
+              <Link to="aboutMe" spy={true} smooth={true} offset={-10} duration={50}>
                 <li>about me</li>
-              </AnchorLink>
+              </Link>
             </ul>
           </div>
           <button type="button" className="btn">

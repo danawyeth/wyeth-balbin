@@ -41,6 +41,7 @@ export default function Portfolio() {
                     updatedRole(x);
                     handleShow();
                     updatedIndex(index);
+                    //preventDefault();
                   }}
                 >
                   <img key={index} src={data.img} alt="" />
@@ -80,7 +81,11 @@ export default function Portfolio() {
   const handleClose = () => setShow(false);
   const handleShow = () => {
     setShow(true);
+    
   };
+
+//  this.$Modal.Header.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this));
+  
 
   return (
     <>
@@ -100,12 +105,14 @@ export default function Portfolio() {
         </div>
         <div className="modalDiv">
           <Modal
+        //  tabindex="-1" 
             show={show}
             onHide={handleClose}
             aria-labelledby="contained-modal-title-vcenter"
             size="xl"
           >
-            <Modal.Header closeButton aria-labelledby="p-0"></Modal.Header>
+            <Modal.Header closeButton aria-labelledby="p-0"
+            data-dismiss="modal" aria-label="Close"></Modal.Header>
             <Modal.Body>
               <div className="flex">
                 {show ? (

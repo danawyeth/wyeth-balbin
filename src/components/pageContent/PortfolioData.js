@@ -21,7 +21,7 @@ const data = {
             role: "Frontend Developer  & UI Designer",
             about: "Wyeth's work portfolio showcasing her past projects. She created the website in a span of one week. The portfolio's design shows a lot about her aesthetic and an eye for art",
             link: "adfajdshakjshdkajshda.com",
-            tools: ["Angular", "HTML & SCSS", "TypeScript", "VSCode", "GitLab", "Figma" ],
+            tools: ["ReactJS", "HTML & SCSS", "JSX", "VSCode", "Git", "Figma" ],
         },
         {
             id: 3,
