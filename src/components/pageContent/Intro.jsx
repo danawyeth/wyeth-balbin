@@ -88,7 +88,7 @@ const Intro = () => {
                 );
               })}
             </div>
-            <img className="wyethPng" src="./wyeth-balbin/wyeth.png" alt="" />
+            <img className="wyethPng" src=".wyeth.png" alt="" />
           </div>
       </div>
     </>
