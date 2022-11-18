@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "http://localhost:3000/static/css/main.acad01eb.css",
-    "main.js": "http://localhost:3000/static/js/main.55f61708.js",
-    "static/media/wyeBg.png": "http://localhost:3000/static/media/wyeBg.ecc4eba39a38872e447a.png",
-    "index.html": "http://localhost:3000/index.html",
-    "main.acad01eb.css.map": "http://localhost:3000/static/css/main.acad01eb.css.map",
-    "main.55f61708.js.map": "http://localhost:3000/static/js/main.55f61708.js.map"
+    "main.css": "/wyeth-balbin/static/css/main.346b44a8.css",
+    "main.js": "/wyeth-balbin/static/js/main.9724e58f.js",
+    "static/media/wyeBg.png": "/wyeth-balbin/static/media/wyeBg.ecc4eba39a38872e447a.png",
+    "index.html": "/wyeth-balbin/index.html",
+    "main.346b44a8.css.map": "/wyeth-balbin/static/css/main.346b44a8.css.map",
+    "main.9724e58f.js.map": "/wyeth-balbin/static/js/main.9724e58f.js.map"
   },
   "entrypoints": [
-    "static/css/main.acad01eb.css",
-    "static/js/main.55f61708.js"
+    "static/css/main.346b44a8.css",
+    "static/js/main.9724e58f.js"
   ]
 }
