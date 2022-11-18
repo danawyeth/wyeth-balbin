@@ -10,7 +10,7 @@ class App extends Component {
         <div className="main">
           <Router basename={process.env.PUBLIC_URL}>
             <Routes>
-              <Route path='/wyeth-balbin' index element={<Main />} />
+              <Route path='/' index element={<Main />} />
             </Routes>
           </Router>
         </div>

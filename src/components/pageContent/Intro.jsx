@@ -18,19 +18,19 @@ const Intro = () => {
                 <p>
                   <strong>Web Developer</strong> (React/Angular)
                 </p>
-                <img className="webBubble" src="laptopBubble.png" alt="" />
+                <img className="webBubble" src="./wyeth-balbin/laptopBubble.png" alt="" />
               </div>
               <div className="box2">
                 <p>
                   <strong>UI/UX Designer</strong>
                 </p>
-                <img className="uiBubble" src="uiBubble.png" alt="" />
+                <img className="uiBubble" src="./wyeth-balbin/uiBubble.png" alt="" />
               </div>
               <div className="box3">
                 <p>
                   <strong>3D Designer</strong>
                 </p>
-                <img className="tdBubble" src="rdBubble.png" alt="" />
+                <img className="tdBubble" src="./wyeth-balbin/rdBubble.png" alt="" />
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ const Intro = () => {
                 );
               })}
             </div>
-            <img className="wyethPng" src="./wyeth.png" alt="" />
+            <img className="wyethPng" src="./wyeth-balbin/wyeth.png" alt="" />
           </div>
       </div>
     </>
