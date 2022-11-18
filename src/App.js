@@ -8,9 +8,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className="main">
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
             <Routes>
-              <Route index element={<Main />} />
+              <Route path='/wyeth-balbin' index element={<Main />} />
             </Routes>
           </Router>
         </div>
