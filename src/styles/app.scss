@@ -571,11 +571,11 @@ $portTextColor: #e8e8e8;
     padding: 9vh 2vw;
 
     @media (max-width: 960px) {
-            padding: 3vh 2vw;
+      padding: 3vh 2vw;
     }
     @media (max-width: 1024px) {
-        padding: 3vh 2vw;
-      }
+      padding: 3vh 0;
+    }
 
     h1 {
       font-weight: 900;
@@ -587,7 +587,6 @@ $portTextColor: #e8e8e8;
     .flex {
       display: flex;
       max-width: 100%;
-      //  height: 50vh;
       justify-content: center;
       align-items: center;
       //  margin: -4vh 0 0 0;
@@ -602,15 +601,6 @@ $portTextColor: #e8e8e8;
           img {
             width: 100%;
             margin: 4vh 0 0 -28px !important;
-          }
-        }
-        .right {
-          width: 100%;
-          text-align: center;
-          align-items: center;
-          p {
-            padding: 0 auto;
-            text-align: justify;
           }
         }
       }
@@ -628,40 +618,58 @@ $portTextColor: #e8e8e8;
               margin: 4vh 0 0 -28px !important;
             }
           }
-          .right {
-            width: 100%;
-            text-align: center;
+        }
+      }
+
+      .left {
+        width: 30%;
+        margin-left: 6vw;
+
+        @media (max-width: 960px) {
+        //  margin: 0 20vw;
+        }
+
+        img {
+          margin: -20px 0 0 0;
+          max-width: 25vw;
+          min-width: 220px;
+          height: auto;
+
+          @media (max-width: 960px) {
+            //margin: 0 20px 0 0 !important;
+            margin: 0 0 0 -70px !important;
             align-items: center;
-            //margin: 0;
+          }
+        }
+      }
+
+      .right {
+        width: 70%;
+        margin: 2vh 0 0 0;
+
+        @media (max-width: 960px) {
+          width: 100%;
+          padding: 0 9vw !important;
+
+          p {
+            padding: 0 !important;
+          }
+        }
+        @media (max-width: 1024px) {
+          @media (max-height: 1366px) {
+            width: 100%;
+            padding: 0 9vw !important;
             p {
-              padding: 0 auto;
-              
-              text-align: justify;
+              padding: 0 !important;
             }
           }
         }
-    }
-        
 
-        .left {
-          width: 30%;
-          margin-left: 6vw;
-
-          img {
-            margin: -20px 0 0 1.5vw;
-            max-height: 50vh;
-          }
-        }
-
-        .right {
-          width: 70%;
-          margin: 2vh 0 0 0;
-          p {
-            padding: 0 6vw 0 0;
-            text-align: justify;
-          }
+        p {
+          padding: 0 6vw 0 0;
+          text-align: justify;
         }
       }
     }
   }
-
+}
