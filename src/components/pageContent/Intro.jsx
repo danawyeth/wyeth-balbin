@@ -55,15 +55,10 @@ const Intro = () => {
                             className="btn fab fa-brands fa-linkedin"
                           ></button>
                         </a>
-                        {/*<a
-                        href=""
-                        target="_blank"
-                        rel="noreferrer">*/}
                         <button
                           type="button"
                           className="btn fab fa-brands fa-github"
                         ></button>
-                        {/*</a>*/}
                         <a
                           href="mailto:wyethbalbin@gmail.com"
                           target="_blank"
@@ -86,7 +81,6 @@ const Intro = () => {
                         </a>
                       </div>
                     </div>
-
                     <div className="long-text">
                       <p>{data.desc}</p>
                     </div>
@@ -94,10 +88,8 @@ const Intro = () => {
                 );
               })}
             </div>
-
             <img className="wyethPng" src="./wyeth.png" alt="" />
           </div>
-        
       </div>
     </>
   );

@@ -1,8 +1,5 @@
 import React from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link } from "react-scroll";
-
-
 
 const Header = () => {
   return (
@@ -14,8 +11,7 @@ const Header = () => {
             <ul>
              <Link to="intro" spy={true} smooth={true} offset={-10} duration={50}>
                 <li>intro</li>
-              </Link>
-             
+              </Link>   
               <Link to="portfolio" spy={true} smooth={true} offset={-10} duration={50}>
                 <li>portfolio</li>
               </Link>

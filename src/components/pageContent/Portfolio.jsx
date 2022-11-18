@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
@@ -11,7 +11,6 @@ SwiperCore.use([Pagination]);
 export default function Portfolio() {
   let params = {
     pagination: {
-      //  dynamicBullets: true,
       clickable: true,
     },
     speed: 500,
@@ -41,7 +40,6 @@ export default function Portfolio() {
                     updatedRole(x);
                     handleShow();
                     updatedIndex(index);
-                    //preventDefault();
                   }}
                 >
                   <img key={index} src={data.img} alt="" />
@@ -84,9 +82,6 @@ export default function Portfolio() {
     
   };
 
-//  this.$Modal.Header.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this));
-  
-
   return (
     <>
       <div id="portfolio" className="portfolio">
@@ -94,14 +89,6 @@ export default function Portfolio() {
           <h1>P O R T F O L I O</h1>
           <p>Web Development  /  UI UX Design  /  3D Design</p>
           <div className="webDev">{swiperPort(Data.webDev, "webDev")}</div>
-          {/*<p>UI UX Design</p>
-          <div className="uixDesign">
-            {swiperPort(Data.uixDesign, "uixDesign")}
-          </div>
-          <p>3D Design</p>
-          <div className="rdDesign">
-            {swiperPort(Data.rdDesign, "rdDesign")}
-          </div>*/}
         </div>
         <div className="modalDiv">
           <Modal
@@ -143,7 +130,6 @@ export default function Portfolio() {
                           
                         </div>
                       </div>
-
                       <h6>
                         <strong>ABOUT</strong>
                       </h6>
