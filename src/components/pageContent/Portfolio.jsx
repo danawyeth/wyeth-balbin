@@ -125,10 +125,6 @@ export default function Portfolio() {
                             </>
                           );
                         })}
-
-                        <div className="capsules">
-                          
-                        </div>
                       </div>
                       <h6>
                         <strong>ABOUT</strong>
