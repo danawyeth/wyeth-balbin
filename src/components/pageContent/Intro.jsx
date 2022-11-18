@@ -12,7 +12,6 @@ const Intro = () => {
   return (
     <>
       <div id="intro" className="intro flex">
-        
           <div className="leftIntro">
             <div className="flex">
               <div className="box1">
@@ -31,7 +30,7 @@ const Intro = () => {
                 <p>
                   <strong>3D Designer</strong>
                 </p>
-                <img className="tdBubble" src="bubble.png" alt="" />
+                <img className="tdBubble" src="rdBubble.png" alt="" />
               </div>
             </div>
           </div>
@@ -47,7 +46,7 @@ const Intro = () => {
                       connect with me
                       <div className="socialIcons">
                         <a
-                          href="https://www.linkedin.com/in/dana-wyeth-b-a5047923a/"
+                          href="https://www.linkedin.com/in/wyeth-balbin"
                           target="_blank"
                           rel="noreferrer"
                         >
@@ -66,7 +65,7 @@ const Intro = () => {
                         ></button>
                         {/*</a>*/}
                         <a
-                          href="mailto:danawyeth@proton.me"
+                          href="mailto:wyethbalbin@gmail.com"
                           target="_blank"
                           rel="noreferrer"
                         >

@@ -16,7 +16,7 @@ export default function Portfolio() {
     },
     speed: 500,
     slidesPerView: 3,
-    spaceBetween: 40,
+    spaceBetween: 20,
     //loop: true,
     className: "mySwiper",
     grabCursor: false,
@@ -92,16 +92,16 @@ export default function Portfolio() {
       <div id="portfolio" className="portfolio">
         <div className="portContainer">
           <h1>P O R T F O L I O</h1>
-          <p>Web Development</p>
+          <p>Web Development  /  UI UX Design  /  3D Design</p>
           <div className="webDev">{swiperPort(Data.webDev, "webDev")}</div>
-          <p>UI UX Design</p>
+          {/*<p>UI UX Design</p>
           <div className="uixDesign">
             {swiperPort(Data.uixDesign, "uixDesign")}
           </div>
           <p>3D Design</p>
           <div className="rdDesign">
             {swiperPort(Data.rdDesign, "rdDesign")}
-          </div>
+          </div>*/}
         </div>
         <div className="modalDiv">
           <Modal
@@ -140,7 +140,7 @@ export default function Portfolio() {
                         })}
 
                         <div className="capsules">
-                          <p>HTML</p>
+                          
                         </div>
                       </div>
 
