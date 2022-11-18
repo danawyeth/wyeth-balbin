@@ -10,7 +10,7 @@ const data = {
             img: "../wyeth-balbin/assets/portfolio/ppCover.jpeg",
             role: "Frontend Developer  & UI Designer",
             about: "Wyeth's work portfolio showcasing her past projects. She created the website in a span of one week. The portfolio's design shows a lot about her aesthetic and an eye for art",
-            link: "adfajdshakjshdkajshda.com",
+            link: "https://danawyeth.github.io/wyeth-balbin/",
             tools: ["ReactJS", "HTML & SCSS", "JSX", "VSCode", "Git", "Figma" ],
             
         },
