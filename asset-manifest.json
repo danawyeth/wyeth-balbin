@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/wyeth-balbin/static/css/main.d6be4bea.css",
-    "main.js": "/wyeth-balbin/static/js/main.faf3925d.js",
+    "main.css": "/wyeth-balbin/static/css/main.d84847bc.css",
+    "main.js": "/wyeth-balbin/static/js/main.7258fe85.js",
     "static/media/wyeBg.png": "/wyeth-balbin/static/media/wyeBg.ecc4eba39a38872e447a.png",
     "index.html": "/wyeth-balbin/index.html",
-    "main.d6be4bea.css.map": "/wyeth-balbin/static/css/main.d6be4bea.css.map",
-    "main.faf3925d.js.map": "/wyeth-balbin/static/js/main.faf3925d.js.map"
+    "main.d84847bc.css.map": "/wyeth-balbin/static/css/main.d84847bc.css.map",
+    "main.7258fe85.js.map": "/wyeth-balbin/static/js/main.7258fe85.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6be4bea.css",
-    "static/js/main.faf3925d.js"
+    "static/css/main.d84847bc.css",
+    "static/js/main.7258fe85.js"
   ]
 }
