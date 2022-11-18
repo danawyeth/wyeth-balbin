@@ -17,7 +17,7 @@ const data = {
         {
             id: 2,
             title: "Baguio Visita 2.0",
-            imgModal: ["../wyeth-balbin/assets/baguio-visita/bv1.jpeg", "../wyeth-balbin/assets/baguio-visita/bv.jpeg", "..wyeth-balbin/assets/baguio-visita/bv2.jpeg"],
+            imgModal: ["../wyeth-balbin/assets/baguio-visita/bv1.jpeg", "../wyeth-balbin/assets/baguio-visita/bv.jpeg", "../wyeth-balbin/assets/baguio-visita/bv2.jpeg"],
             img: "../wyeth-balbin/assets/baguio-visita/bv1.jpeg",
             role: "Frontend Developer & UI Designer",
             about: "Built and designed web components for Baguio VIS.I.T.A - the Baguio VIS.I.T.A. (Visitor Information and Travel Assistant) is the online registration system for Baguio tourists and travelers. It has become an instrumental tool for the city’s cautious re-start of tourism activities and gradual re-opening of the local economy.",
