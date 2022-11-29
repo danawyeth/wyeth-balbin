@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.dbf5d0af.css",
-    "main.js": "/portfolio/static/js/main.f05db9b1.js",
-    "static/media/wyeBg.png": "/portfolio/static/media/wyeBg.ecc4eba39a38872e447a.png",
-    "index.html": "/portfolio/index.html",
-    "main.dbf5d0af.css.map": "/portfolio/static/css/main.dbf5d0af.css.map",
-    "main.f05db9b1.js.map": "/portfolio/static/js/main.f05db9b1.js.map"
+    "main.css": "/wyeth-balbin/static/css/main.f9ce35c5.css",
+    "main.js": "/wyeth-balbin/static/js/main.7258fe85.js",
+    "static/media/wyeBg.png": "/wyeth-balbin/static/media/wyeBg.ecc4eba39a38872e447a.png",
+    "index.html": "/wyeth-balbin/index.html",
+    "main.f9ce35c5.css.map": "/wyeth-balbin/static/css/main.f9ce35c5.css.map",
+    "main.7258fe85.js.map": "/wyeth-balbin/static/js/main.7258fe85.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbf5d0af.css",
-    "static/js/main.f05db9b1.js"
+    "static/css/main.f9ce35c5.css",
+    "static/js/main.7258fe85.js"
   ]
 }
