@@ -9,7 +9,7 @@ class About extends Component {
             <h1>ABOUT ME </h1>
             <div className="flex">
               <div className="left">
-                <img src="../portfolio/about.png" alt="" loading="lazy"/>
+                <img src="../wyeth-balbin/about.png" alt="" loading="lazy"/>
 
               </div>
               <div className="right">
